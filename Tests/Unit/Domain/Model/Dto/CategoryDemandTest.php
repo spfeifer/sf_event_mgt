@@ -9,14 +9,14 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\Domain\Model\Dto;
  */
 
 use DERHANSEN\SfEventMgt\Domain\Model\Dto\CategoryDemand;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 
 /**
  * Test case for class \DERHANSEN\SfEventMgt\Domain\Model\Dto\CategoryDemand
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class CategoryDemandTest extends UnitTestCase
+class CategoryDemandTest extends BaseTestCase
 {
     /**
      * @var \DERHANSEN\SfEventMgt\Domain\Model\Dto\CategoryDemand

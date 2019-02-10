@@ -9,14 +9,14 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\Payment;
  */
 
 use DERHANSEN\SfEventMgt\Payment\AbstractPayment;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 
 /**
  * Test case for class DERHANSEN\SfEventMgt\Payment\AbstractPayment.
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class AbstractPaymentTest extends UnitTestCase
+class AbstractPaymentTest extends BaseTestCase
 {
     /**
      * @var \DERHANSEN\SfEventMgt\Payment\AbstractPayment

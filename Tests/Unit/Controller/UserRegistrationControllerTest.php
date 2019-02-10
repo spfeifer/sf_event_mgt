@@ -12,7 +12,7 @@ use DERHANSEN\SfEventMgt\Controller\UserRegistrationController;
 use DERHANSEN\SfEventMgt\Domain\Model\Dto\UserRegistrationDemand;
 use DERHANSEN\SfEventMgt\Domain\Repository\RegistrationRepository;
 use DERHANSEN\SfEventMgt\Service\RegistrationService;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
@@ -22,7 +22,7 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class UserRegistrationControllerTest extends UnitTestCase
+class UserRegistrationControllerTest extends BaseTestCase
 {
     /**
      * @var \DERHANSEN\SfEventMgt\Controller\UserRegistrationController

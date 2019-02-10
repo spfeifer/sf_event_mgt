@@ -11,7 +11,7 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\ViewHelpers;
 use DERHANSEN\SfEventMgt\Domain\Model\Registration\Field;
 use DERHANSEN\SfEventMgt\Domain\Model\Registration\FieldValue;
 use DERHANSEN\SfEventMgt\ViewHelpers\Registration\Field\PrefillMultiValueFieldViewHelper;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Extbase\Mvc\Request;
 use TYPO3\CMS\Extbase\Property\PropertyMapper;
 
@@ -20,7 +20,7 @@ use TYPO3\CMS\Extbase\Property\PropertyMapper;
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class PrefillMultiValueFieldViewHelperTest extends UnitTestCase
+class PrefillMultiValueFieldViewHelperTest extends BaseTestCase
 {
     /**
      * @test

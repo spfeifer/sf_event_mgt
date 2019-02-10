@@ -19,10 +19,10 @@
     "GPL-2.0+"
   ],
   "require": {
-    "typo3/cms-core": "^8.7 || ^9.5"
-  },
-  "require-dev": {
-    "nimut/testing-framework": "3.x-dev || 4.x-dev"
+    "typo3/cms-core": "^8.7 || ^9.5",
+    "php": ">=7.0",
+    "typo3/minimal": "^9",
+    "typo3/testing-framework": "^4"
   },
   "replace": {
     "sf_event_mgt": "self.version",
@@ -50,7 +50,8 @@
   },
   "extra": {
     "typo3/cms": {
-      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "extension-key": "sf_event_mgt",
+      "app-dir": ".Build",
       "web-dir": ".Build/Web"
     }
   }

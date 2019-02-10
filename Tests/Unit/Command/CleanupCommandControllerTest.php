@@ -11,7 +11,7 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\Command;
 use DERHANSEN\SfEventMgt\Command\CleanupCommandController;
 use DERHANSEN\SfEventMgt\Service\RegistrationService;
 use DERHANSEN\SfEventMgt\Service\UtilityService;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Extbase\Configuration\ConfigurationManager;
 
 /**
@@ -19,7 +19,7 @@ use TYPO3\CMS\Extbase\Configuration\ConfigurationManager;
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class CleanupCommandControllerTest extends UnitTestCase
+class CleanupCommandControllerTest extends BaseTestCase
 {
     /**
      * @var \DERHANSEN\SfEventMgt\Command\CleanupCommandController

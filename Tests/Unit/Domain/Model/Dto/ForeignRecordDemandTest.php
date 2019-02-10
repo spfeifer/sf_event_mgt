@@ -9,14 +9,14 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\Domain\Model\Dto;
  */
 
 use DERHANSEN\SfEventMgt\Domain\Model\Dto\ForeignRecordDemand;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 
 /**
  * Test case for class \DERHANSEN\SfEventMgt\Domain\Model\Dto\ForeignRecordDemand
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class ForeignRecordDemandTest extends UnitTestCase
+class ForeignRecordDemandTest extends BaseTestCase
 {
     /**
      * @var \DERHANSEN\SfEventMgt\Domain\Model\Dto\ForeignRecordDemand

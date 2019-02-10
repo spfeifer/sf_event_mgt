@@ -10,7 +10,7 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\Domain\Model;
 
 use DERHANSEN\SfEventMgt\Domain\Model\CustomNotificationLog;
 use DERHANSEN\SfEventMgt\Domain\Model\Event;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Extbase\Domain\Model\BackendUser;
 
 /**
@@ -18,7 +18,7 @@ use TYPO3\CMS\Extbase\Domain\Model\BackendUser;
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class CustomNotificationLogTest extends UnitTestCase
+class CustomNotificationLogTest extends BaseTestCase
 {
     /**
      * @var \DERHANSEN\SfEventMgt\Domain\Model\CustomNotificationLog

@@ -9,7 +9,7 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\Service;
  */
 
 use DERHANSEN\SfEventMgt\Service\FluidStandaloneService;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Configuration\ConfigurationManager;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
@@ -21,7 +21,7 @@ use TYPO3\CMS\Fluid\View\StandaloneView;
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class FluidStandaloneServiceTest extends UnitTestCase
+class FluidStandaloneServiceTest extends BaseTestCase
 {
     /**
      * @var FluidStandaloneService

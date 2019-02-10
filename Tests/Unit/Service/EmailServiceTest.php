@@ -9,7 +9,7 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\Service;
  */
 
 use DERHANSEN\SfEventMgt\Service\EmailService;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Core\Mail\MailMessage;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -18,7 +18,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class EmailServiceTest extends UnitTestCase
+class EmailServiceTest extends BaseTestCase
 {
     /**
      * @var \DERHANSEN\SfEventMgt\Service\EmailService

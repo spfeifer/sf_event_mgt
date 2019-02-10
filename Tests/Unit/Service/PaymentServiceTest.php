@@ -11,14 +11,14 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\Service;
 use DERHANSEN\SfEventMgt\Payment\Invoice;
 use DERHANSEN\SfEventMgt\Payment\Transfer;
 use DERHANSEN\SfEventMgt\Service\PaymentService;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 
 /**
  * Class PaymentServiceTest
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class PaymentServiceTest extends UnitTestCase
+class PaymentServiceTest extends BaseTestCase
 {
     /**
      * @var PaymentService

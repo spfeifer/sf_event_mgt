@@ -10,38 +10,51 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\ViewHelpers\Registration;
 
 use DERHANSEN\SfEventMgt\Domain\Model\Registration\Field;
 use DERHANSEN\SfEventMgt\ViewHelpers\Registration\IsRequiredFieldViewHelper;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Fluid\Unit\ViewHelpers\ViewHelperBaseTestcase;
 
 /**
  * Test case for IsRequiredField viewhelper
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class IsRequiredFieldViewHelperTest extends UnitTestCase
+class IsRequiredFieldViewHelperTest extends ViewHelperBaseTestcase
 {
+    /**
+     * @var IsRequiredFieldViewHelper
+     */
+    protected $viewHelper;
+
+    public function setUp()
+    {
+        parent::setUp();
+        $this->viewHelper = $this->getAccessibleMock(
+            IsRequiredFieldViewHelper::class,
+            ['renderThenChild', 'renderElseChild']
+        );
+        $this->viewHelper->expects($this->any())->method('renderThenChild')->will($this->returnValue('then child'));
+        $this->viewHelper->expects($this->any())->method('renderElseChild')->will($this->returnValue('else child'));
+        $this->injectDependenciesIntoViewHelper($this->viewHelper);
+        $this->viewHelper->initializeArguments();
+    }
+
     /**
      * @test
      */
     public function viewHelperDoesNotRenderThenChildWhenNoFieldnameGiven()
     {
-        $viewHelper = $this->getAccessibleMock(
-            IsRequiredFieldViewHelper::class,
-            [
-                'renderThenChild',
-                'renderElseChild'
-            ]
-        );
-        $viewHelper->expects($this->never())->method('renderThenChild');
-        $viewHelper->expects($this->once())->method('renderElseChild');
-        $viewHelper->setArguments([
+        $this->arguments = [
             'fieldname' => '',
             'settings' => [
                 'registration' => [
                     'requiredFields' => 'zip'
                 ]
             ]
-        ]);
-        $viewHelper->render();
+        ];
+        $this->injectDependenciesIntoViewHelper($this->viewHelper);
+        $this->resetSingletonInstances = true;
+
+        $actualResult = $this->viewHelper->render();
+        $this->assertEquals('else child', $actualResult);
     }
 
     /**
@@ -49,24 +62,18 @@ class IsRequiredFieldViewHelperTest extends UnitTestCase
      */
     public function viewHelperDoesNotRenderThenChildWhenFieldnameNotInSettings()
     {
-        $viewHelper = $this->getAccessibleMock(
-            IsRequiredFieldViewHelper::class,
-            [
-                'renderThenChild',
-                'renderElseChild'
-            ]
-        );
-        $viewHelper->expects($this->never())->method('renderThenChild');
-        $viewHelper->expects($this->once())->method('renderElseChild');
-        $viewHelper->setArguments([
+        $this->arguments = [
             'fieldname' => 'zip',
             'settings' => [
                 'registration' => [
                     'requiredFields' => 'firstname,lastname'
                 ]
             ]
-        ]);
-        $viewHelper->render();
+        ];
+        $this->injectDependenciesIntoViewHelper($this->viewHelper);
+
+        $actualResult = $this->viewHelper->render();
+        $this->assertEquals('else child', $actualResult);
     }
 
     /**
@@ -74,24 +81,18 @@ class IsRequiredFieldViewHelperTest extends UnitTestCase
      */
     public function viewHelperRendersThenChildWhenFieldnameInSettings()
     {
-        $viewHelper = $this->getAccessibleMock(
-            IsRequiredFieldViewHelper::class,
-            [
-                'renderThenChild',
-                'renderElseChild'
-            ]
-        );
-        $viewHelper->expects($this->once())->method('renderThenChild');
-        $viewHelper->expects($this->never())->method('renderElseChild');
-        $viewHelper->setArguments([
+        $this->arguments = [
             'fieldname' => 'zip',
             'settings' => [
                 'registration' => [
                     'requiredFields' => 'zip,otherfield'
                 ]
             ]
-        ]);
-        $viewHelper->render();
+        ];
+        $this->injectDependenciesIntoViewHelper($this->viewHelper);
+
+        $actualResult = $this->viewHelper->render();
+        $this->assertEquals('then child', $actualResult);
     }
 
     /**
@@ -99,24 +100,18 @@ class IsRequiredFieldViewHelperTest extends UnitTestCase
      */
     public function viewHelperRenderThenChildForDefaultRequiredFieldnames()
     {
-        $viewHelper = $this->getAccessibleMock(
-            IsRequiredFieldViewHelper::class,
-            [
-                'renderThenChild',
-                'renderElseChild'
-            ]
-        );
-        $viewHelper->expects($this->once())->method('renderThenChild');
-        $viewHelper->expects($this->never())->method('renderElseChild');
-        $viewHelper->setArguments([
+        $this->arguments = [
             'fieldname' => 'firstname',
             'settings' => [
                 'registration' => [
                     'requiredFields' => 'zip,otherfield'
                 ]
             ]
-        ]);
-        $viewHelper->render();
+        ];
+        $this->injectDependenciesIntoViewHelper($this->viewHelper);
+
+        $actualResult = $this->viewHelper->render();
+        $this->assertEquals('then child', $actualResult);
     }
 
     /**
@@ -124,20 +119,14 @@ class IsRequiredFieldViewHelperTest extends UnitTestCase
      */
     public function viewHelperDoesNotRenderThenChildWhenNoRegistrationFieldGiven()
     {
-        $viewHelper = $this->getAccessibleMock(
-            IsRequiredFieldViewHelper::class,
-            [
-                'renderThenChild',
-                'renderElseChild'
-            ]
-        );
-        $viewHelper->expects($this->never())->method('renderThenChild');
-        $viewHelper->expects($this->once())->method('renderElseChild');
-        $viewHelper->setArguments([
+        $this->arguments = [
             'registrationField' => null,
             'settings' => []
-        ]);
-        $viewHelper->render();
+        ];
+        $this->injectDependenciesIntoViewHelper($this->viewHelper);
+
+        $actualResult = $this->viewHelper->render();
+        $this->assertEquals('else child', $actualResult);
     }
 
     /**
@@ -145,24 +134,17 @@ class IsRequiredFieldViewHelperTest extends UnitTestCase
      */
     public function viewHelperDoesNotRenderThenChildWhenOptionalRegistrationFieldGiven()
     {
-        $viewHelper = $this->getAccessibleMock(
-            IsRequiredFieldViewHelper::class,
-            [
-                'renderThenChild',
-                'renderElseChild'
-            ]
-        );
-
         $optionalRegistrationField = new Field();
         $optionalRegistrationField->setRequired(false);
 
-        $viewHelper->expects($this->never())->method('renderThenChild');
-        $viewHelper->expects($this->once())->method('renderElseChild');
-        $viewHelper->setArguments([
+        $this->arguments = [
             'registrationField' => $optionalRegistrationField,
             'settings' => []
-        ]);
-        $viewHelper->render();
+        ];
+        $this->injectDependenciesIntoViewHelper($this->viewHelper);
+
+        $actualResult = $this->viewHelper->render();
+        $this->assertEquals('else child', $actualResult);
     }
 
     /**
@@ -170,23 +152,16 @@ class IsRequiredFieldViewHelperTest extends UnitTestCase
      */
     public function viewHelperDoesRenderThenChildWhenRequiredRegistrationFieldGiven()
     {
-        $viewHelper = $this->getAccessibleMock(
-            IsRequiredFieldViewHelper::class,
-            [
-                'renderThenChild',
-                'renderElseChild'
-            ]
-        );
+        $optionalRegistrationField = new Field();
+        $optionalRegistrationField->setRequired(true);
 
-        $requiredRegistrationField = new Field();
-        $requiredRegistrationField->setRequired(true);
-
-        $viewHelper->expects($this->once())->method('renderThenChild');
-        $viewHelper->expects($this->never())->method('renderElseChild');
-        $viewHelper->setArguments([
-            'registrationField' => $requiredRegistrationField,
+        $this->arguments = [
+            'registrationField' => $optionalRegistrationField,
             'settings' => []
-        ]);
-        $viewHelper->render();
+        ];
+        $this->injectDependenciesIntoViewHelper($this->viewHelper);
+
+        $actualResult = $this->viewHelper->render();
+        $this->assertEquals('then child', $actualResult);
     }
 }

@@ -9,14 +9,14 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\Evaluation;
  */
 
 use DERHANSEN\SfEventMgt\Evaluation\LatitudeEvaluator;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 
 /**
  * Test case for class DERHANSEN\SfEventMgt\Evaluation\LatitudeEvaluator
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class LatitudeEvaluatorTest extends UnitTestCase
+class LatitudeEvaluatorTest extends BaseTestCase
 {
     /**
      * LatitudeEvaluator

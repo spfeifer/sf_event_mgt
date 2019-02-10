@@ -9,14 +9,14 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\ViewHelpers;
  */
 
 use DERHANSEN\SfEventMgt\ViewHelpers\Format\ICalendarDescriptionViewHelper;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 
 /**
  * Test case for iCalendar Description viewhelper
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class ICalendarDescriptionViewHelperTest extends UnitTestCase
+class ICalendarDescriptionViewHelperTest extends BaseTestCase
 {
     /**
      * Data Provider for unit tests

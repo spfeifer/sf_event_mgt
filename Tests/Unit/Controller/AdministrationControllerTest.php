@@ -18,7 +18,7 @@ use DERHANSEN\SfEventMgt\Service\BeUserSessionService;
 use DERHANSEN\SfEventMgt\Service\NotificationService;
 use DERHANSEN\SfEventMgt\Service\RegistrationService;
 use DERHANSEN\SfEventMgt\Service\SettingsService;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
 use TYPO3\CMS\Extbase\Mvc\Controller\Argument;
 use TYPO3\CMS\Extbase\Mvc\Controller\Arguments;
@@ -33,7 +33,7 @@ use TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter;
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class AdministrationControllerTest extends UnitTestCase
+class AdministrationControllerTest extends BaseTestCase
 {
     /**
      * @var \DERHANSEN\SfEventMgt\Controller\AdministrationController | \PHPUnit_Framework_MockObject_MockObject

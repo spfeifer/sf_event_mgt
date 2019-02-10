@@ -12,7 +12,7 @@ use DERHANSEN\SfEventMgt\Domain\Model\Registration;
 use DERHANSEN\SfEventMgt\Domain\Repository\RegistrationRepository;
 use DERHANSEN\SfEventMgt\Exception;
 use DERHANSEN\SfEventMgt\Service\ExportService;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
 use TYPO3\CMS\Core\Resource\File;
 use TYPO3\CMS\Core\Resource\ResourceFactory;
@@ -24,7 +24,7 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class ExportServiceTest extends UnitTestCase
+class ExportServiceTest extends BaseTestCase
 {
     /**
      * @var ExportService

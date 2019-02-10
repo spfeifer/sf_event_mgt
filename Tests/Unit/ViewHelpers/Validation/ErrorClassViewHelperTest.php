@@ -10,12 +10,12 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\ViewHelpers;
 
 use DERHANSEN\SfEventMgt\Domain\Model\Registration\Field;
 use DERHANSEN\SfEventMgt\ViewHelpers\Validation\ErrorClassViewHelper;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 
 /**
  * Test for ErrorClassViewHelperTest
  */
-class ErrorClassViewHelperTest extends UnitTestCase
+class ErrorClassViewHelperTest extends BaseTestCase
 {
     /**
      * Viewhelper

@@ -10,14 +10,14 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\ViewHelpers;
 
 use DERHANSEN\SfEventMgt\ViewHelpers\TitleViewHelper;
 use Nimut\TestingFramework\MockObject\AccessibleMockObjectInterface;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Fluid\Core\Rendering\RenderingContext;
 use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 
 /**
  * Test for TitleViewHelper
  */
-class TitleViewHelperTest extends UnitTestCase
+class TitleViewHelperTest extends BaseTestCase
 {
     /**
      * @var \PHPUnit_Framework_MockObject_MockObject|\TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController|AccessibleMockObjectInterface

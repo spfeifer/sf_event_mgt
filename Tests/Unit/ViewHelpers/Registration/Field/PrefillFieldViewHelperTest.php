@@ -10,7 +10,7 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\ViewHelpers;
 
 use DERHANSEN\SfEventMgt\Domain\Model\Registration\Field;
 use DERHANSEN\SfEventMgt\ViewHelpers\Registration\Field\PrefillFieldViewHelper;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Extbase\Mvc\Request;
 
 /**
@@ -18,7 +18,7 @@ use TYPO3\CMS\Extbase\Mvc\Request;
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class PrefillFieldViewHelperTest extends UnitTestCase
+class PrefillFieldViewHelperTest extends BaseTestCase
 {
     /**
      * @test

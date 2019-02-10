@@ -10,14 +10,14 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\ViewHelpers\Event;
 
 use DERHANSEN\SfEventMgt\Domain\Model\Event;
 use DERHANSEN\SfEventMgt\ViewHelpers\Event\SimultaneousRegistrationsViewHelper;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 
 /**
  * Test cases for SimultaneousRegistrationsViewHelper
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class SimultaneousRegistrationsViewHelperTest extends UnitTestCase
+class SimultaneousRegistrationsViewHelperTest extends BaseTestCase
 {
     /**
      * Viewhelper

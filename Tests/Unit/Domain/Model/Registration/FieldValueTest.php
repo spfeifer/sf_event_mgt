@@ -12,14 +12,14 @@ use DERHANSEN\SfEventMgt\Domain\Model\Registration;
 use DERHANSEN\SfEventMgt\Domain\Model\Registration\Field;
 use DERHANSEN\SfEventMgt\Domain\Model\Registration\FieldValue;
 use DERHANSEN\SfEventMgt\Utility\FieldValueType;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 
 /**
  * Test case for class \DERHANSEN\SfEventMgt\Domain\Model\Registration\FieldValue.
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class FieldValueTest extends UnitTestCase
+class FieldValueTest extends BaseTestCase
 {
     /**
      * Registrationfield object

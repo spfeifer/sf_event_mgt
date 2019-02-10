@@ -16,7 +16,7 @@ use DERHANSEN\SfEventMgt\Domain\Model\PriceOption;
 use DERHANSEN\SfEventMgt\Domain\Model\Registration;
 use DERHANSEN\SfEventMgt\Domain\Model\Registration\Field;
 use DERHANSEN\SfEventMgt\Domain\Model\Speaker;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
@@ -25,7 +25,7 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class EventTest extends UnitTestCase
+class EventTest extends BaseTestCase
 {
     /**
      * @var \DERHANSEN\SfEventMgt\Domain\Model\Event

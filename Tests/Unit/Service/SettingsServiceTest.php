@@ -9,14 +9,14 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\Service;
  */
 
 use DERHANSEN\SfEventMgt\Service\SettingsService;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 
 /**
  * Test case for class DERHANSEN\SfEventMgt\Service\SettingsService.
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class SettingsServiceTest extends UnitTestCase
+class SettingsServiceTest extends BaseTestCase
 {
     /**
      * @var \DERHANSEN\SfEventMgt\Service\SettingsService

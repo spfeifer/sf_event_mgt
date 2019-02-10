@@ -18,7 +18,7 @@ use DERHANSEN\SfEventMgt\Service\FluidStandaloneService;
 use DERHANSEN\SfEventMgt\Service\Notification\AttachmentService;
 use DERHANSEN\SfEventMgt\Service\NotificationService;
 use DERHANSEN\SfEventMgt\Utility\MessageType;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\CMS\Extbase\Security\Cryptography\HashService;
 
@@ -27,7 +27,7 @@ use TYPO3\CMS\Extbase\Security\Cryptography\HashService;
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class NotificationServiceTest extends UnitTestCase
+class NotificationServiceTest extends BaseTestCase
 {
     /**
      * @var \DERHANSEN\SfEventMgt\Service\NotificationService

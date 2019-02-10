@@ -9,7 +9,7 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\ViewHelpers;
  */
 
 use DERHANSEN\SfEventMgt\ViewHelpers\Uri\PageViewHelper;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Core\TimeTracker\TimeTracker;
 use TYPO3\CMS\Extbase\Mvc\Controller\ControllerContext;
 use TYPO3\CMS\Extbase\Mvc\Web\Routing\UriBuilder;
@@ -20,7 +20,7 @@ use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class PageViewHelperTest extends UnitTestCase
+class PageViewHelperTest extends BaseTestCase
 {
     /**
      * Test if all methods from UriBuilder are called and that UriBuilder creates a frontend uri
@@ -176,7 +176,6 @@ class PageViewHelperTest extends UnitTestCase
             ->getMock();
         $mockTsfe->expects($this->once())->method('initFEuser');
         $mockTsfe->expects($this->once())->method('fetch_the_id');
-        $mockTsfe->expects($this->once())->method('getPageAndRootline');
         $mockTsfe->expects($this->once())->method('initTemplate');
         $mockTsfe->expects($this->once())->method('getConfigArray');
 
@@ -214,7 +213,6 @@ class PageViewHelperTest extends UnitTestCase
             ->getMock();
         $mockTsfe->expects($this->once())->method('initFEuser');
         $mockTsfe->expects($this->once())->method('fetch_the_id');
-        $mockTsfe->expects($this->once())->method('getPageAndRootline');
         $mockTsfe->expects($this->once())->method('initTemplate');
         $mockTsfe->expects($this->once())->method('getConfigArray');
 

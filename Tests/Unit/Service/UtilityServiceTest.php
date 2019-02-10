@@ -10,7 +10,7 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\Service;
 
 use DERHANSEN\SfEventMgt\Service\SettingsService;
 use DERHANSEN\SfEventMgt\Service\UtilityService;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Extbase\Service\CacheService;
 
 /**
@@ -18,7 +18,7 @@ use TYPO3\CMS\Extbase\Service\CacheService;
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class UtilityServiceTest extends UnitTestCase
+class UtilityServiceTest extends BaseTestCase
 {
     /**
      * @var \DERHANSEN\SfEventMgt\Service\UtilityService

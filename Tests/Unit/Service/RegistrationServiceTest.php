@@ -15,7 +15,7 @@ use DERHANSEN\SfEventMgt\Domain\Repository\RegistrationRepository;
 use DERHANSEN\SfEventMgt\Service\PaymentService;
 use DERHANSEN\SfEventMgt\Service\RegistrationService;
 use DERHANSEN\SfEventMgt\Utility\RegistrationResult;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Extbase\Domain\Model\FrontendUser;
 use TYPO3\CMS\Extbase\Domain\Repository\FrontendUserRepository;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
@@ -27,7 +27,7 @@ use TYPO3\CMS\Extbase\Security\Cryptography\HashService;
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class RegistrationServiceTest extends UnitTestCase
+class RegistrationServiceTest extends BaseTestCase
 {
     /**
      * @var \DERHANSEN\SfEventMgt\Service\RegistrationService

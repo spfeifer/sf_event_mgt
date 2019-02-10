@@ -12,7 +12,7 @@ use DERHANSEN\SfEventMgt\Domain\Model\Event;
 use DERHANSEN\SfEventMgt\Exception;
 use DERHANSEN\SfEventMgt\Service\FluidStandaloneService;
 use DERHANSEN\SfEventMgt\Service\ICalendarService;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Core\Resource\File;
 use TYPO3\CMS\Core\Resource\ResourceFactory;
 use TYPO3\CMS\Core\Resource\StorageRepository;
@@ -24,7 +24,7 @@ use TYPO3\CMS\Fluid\View\StandaloneView;
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class ICalendarServiceTest extends UnitTestCase
+class ICalendarServiceTest extends BaseTestCase
 {
     /**
      * @var \DERHANSEN\SfEventMgt\Service\ICalendarService

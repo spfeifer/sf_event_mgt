@@ -26,7 +26,7 @@ use DERHANSEN\SfEventMgt\Service\PaymentService;
 use DERHANSEN\SfEventMgt\Service\RegistrationService;
 use DERHANSEN\SfEventMgt\Service\UtilityService;
 use DERHANSEN\SfEventMgt\Utility\RegistrationResult;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Extbase\Mvc\Controller\Argument;
 use TYPO3\CMS\Extbase\Mvc\Controller\Arguments;
 use TYPO3\CMS\Extbase\Mvc\Controller\MvcPropertyMappingConfiguration;
@@ -47,7 +47,7 @@ use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class EventControllerTest extends UnitTestCase
+class EventControllerTest extends BaseTestCase
 {
     /**
      * @var \DERHANSEN\SfEventMgt\Controller\EventController

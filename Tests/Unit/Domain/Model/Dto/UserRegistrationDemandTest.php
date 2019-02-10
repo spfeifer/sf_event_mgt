@@ -9,7 +9,7 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\Domain\Model\Dto;
  */
 
 use DERHANSEN\SfEventMgt\Domain\Model\Dto\UserRegistrationDemand;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Extbase\Domain\Model\FrontendUser;
 
 /**
@@ -17,7 +17,7 @@ use TYPO3\CMS\Extbase\Domain\Model\FrontendUser;
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class UserRegistrationDemandTest extends UnitTestCase
+class UserRegistrationDemandTest extends BaseTestCase
 {
     /**
      * @var \DERHANSEN\SfEventMgt\Domain\Model\Dto\UserRegistrationDemand

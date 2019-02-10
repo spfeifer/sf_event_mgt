@@ -9,7 +9,7 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\Service;
  */
 
 use DERHANSEN\SfEventMgt\Service\BeUserSessionService;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
 
 /**
@@ -17,7 +17,7 @@ use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
  *
  * @author Torben Hansen <derhansen@gmail.com>
  */
-class BeUserSessionServiceTest extends UnitTestCase
+class BeUserSessionServiceTest extends BaseTestCase
 {
     /**
      * @var \DERHANSEN\SfEventMgt\Service\BeUserSessionService
