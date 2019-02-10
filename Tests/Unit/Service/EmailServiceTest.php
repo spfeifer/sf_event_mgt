@@ -9,9 +9,9 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\Service;
  */
 
 use DERHANSEN\SfEventMgt\Service\EmailService;
-use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Core\Mail\MailMessage;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 
 /**
  * Test case for class DERHANSEN\SfEventMgt\Service\EmailService.

@@ -68,6 +68,7 @@ class CategoryService
             if ($counter > 10000) {
                 GeneralUtility::makeInstance(TimeTracker::class)
                     ->setTSlogMessage('EXT:sf_event_mgt: one or more recursive categories where found');
+
                 return implode(',', $result);
             }
             $subcategories = self::getChildrenCategoriesRecursive($row['uid'], $counter);
@@ -75,6 +76,7 @@ class CategoryService
         }
 
         $result = implode(',', $result);
+
         return $result;
     }
 

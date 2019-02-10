@@ -11,9 +11,9 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\ViewHelpers;
 use DERHANSEN\SfEventMgt\Domain\Model\Registration\Field;
 use DERHANSEN\SfEventMgt\Domain\Model\Registration\FieldValue;
 use DERHANSEN\SfEventMgt\ViewHelpers\Registration\Field\PrefillMultiValueFieldViewHelper;
-use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Extbase\Mvc\Request;
 use TYPO3\CMS\Extbase\Property\PropertyMapper;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 
 /**
  * Test case for prefillMultiValueField viewhelper

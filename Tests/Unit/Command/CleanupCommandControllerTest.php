@@ -11,8 +11,8 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\Command;
 use DERHANSEN\SfEventMgt\Command\CleanupCommandController;
 use DERHANSEN\SfEventMgt\Service\RegistrationService;
 use DERHANSEN\SfEventMgt\Service\UtilityService;
-use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Extbase\Configuration\ConfigurationManager;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 
 /**
  * Test case for class DERHANSEN\SfEventMgt\Command\CleanupCommandController.

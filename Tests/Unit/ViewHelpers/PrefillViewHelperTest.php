@@ -9,9 +9,9 @@ namespace DERHANSEN\SfEventMgt\Tests\Unit\ViewHelpers;
  */
 
 use DERHANSEN\SfEventMgt\ViewHelpers\PrefillViewHelper;
-use TYPO3\TestingFramework\Core\BaseTestCase;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Mvc\Request;
+use TYPO3\TestingFramework\Core\BaseTestCase;
 
 /**
  * Test case for prefill viewhelper
