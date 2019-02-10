@@ -11,7 +11,7 @@ namespace DERHANSEN\SfEventMgt\Tests\Functional\Repository;
 use DERHANSEN\SfEventMgt\Domain\Model\Dto\UserRegistrationDemand;
 use DERHANSEN\SfEventMgt\Domain\Model\Event;
 use DERHANSEN\SfEventMgt\Domain\Repository\RegistrationRepository;
-use Nimut\TestingFramework\TestCase\FunctionalTestCase;
+use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Domain\Repository\FrontendUserRepository;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
@@ -41,7 +41,6 @@ class RegistrationRepositoryTest extends FunctionalTestCase
     /**
      * Setup
      *
-     * @throws \TYPO3\CMS\Core\Tests\Exception
      * @return void
      */
     public function setUp()

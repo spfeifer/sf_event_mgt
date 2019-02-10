@@ -14,7 +14,7 @@ use DERHANSEN\SfEventMgt\Domain\Repository\EventRepository;
 use DERHANSEN\SfEventMgt\Domain\Repository\LocationRepository;
 use DERHANSEN\SfEventMgt\Domain\Repository\OrganisatorRepository;
 use DERHANSEN\SfEventMgt\Domain\Repository\SpeakerRepository;
-use Nimut\TestingFramework\TestCase\FunctionalTestCase;
+use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 
@@ -46,7 +46,6 @@ class EventRepositoryTest extends FunctionalTestCase
     /**
      * Setup
      *
-     * @throws \TYPO3\CMS\Core\Tests\Exception
      * @return void
      */
     public function setUp()

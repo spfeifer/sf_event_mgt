@@ -9,7 +9,7 @@ namespace DERHANSEN\SfEventMgt\Tests\Functional\Repository;
  */
 
 use DERHANSEN\SfEventMgt\Domain\Repository\LocationRepository;
-use Nimut\TestingFramework\TestCase\FunctionalTestCase;
+use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 
@@ -32,7 +32,6 @@ class LocationRepositoryTest extends FunctionalTestCase
     /**
      * Setup
      *
-     * @throws \TYPO3\CMS\Core\Tests\Exception
      * @return void
      */
     public function setUp()
